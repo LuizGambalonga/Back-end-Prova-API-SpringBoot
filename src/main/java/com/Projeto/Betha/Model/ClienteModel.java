@@ -1,6 +1,7 @@
 package com.Projeto.Betha.Model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 
 @Entity
@@ -31,9 +33,19 @@ public class ClienteModel implements Serializable {
 	private String endereco;
 	@Column(name = "TELEFONE",nullable = false,length = 100)
 	private String telefone;
+//	@Column(name ="data_cadastro", updatable = false)
+//	@JsonFormat(pattern="dd/mm/yyyy")
+//	private LocalDate dataCadastro;
+	
 	public Long getId() {
 		return id;
 	}
+//	public LocalDate getDataCadastro() {
+//		return dataCadastro;
+//	}
+//	public void setDataCadastro(LocalDate dataCadastro) {
+//		this.dataCadastro = dataCadastro;
+//	}
 	public void setId(Long id) {
 		this.id = id;
 	}
